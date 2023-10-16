@@ -18,8 +18,6 @@ const LoginUser = async (input) => {
         toast.warning("Password atau Email Salah");
       } else if (err.response.data.message === "User is not found") {
         toast.warning("pengguna tidak di temukan");
-      } else if (err.response.data.message === "Email is not valid") {
-        toast.warning("email tidak benar atau salah");
       } else {
         toast.warning("Password atau Email Tidak di isi");
       }
