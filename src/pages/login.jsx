@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { navigate, useNavigate } from "react-router-dom";
 import { useLoginUser } from "../services/login-user";
+import GoogleLogin from "../assets/component/Googlelogin";
 
 export const Login = () => {
   const [email, setemail] = useState("");
@@ -59,6 +60,7 @@ export const Login = () => {
           Login
         </button>
       </div>
+      <GoogleLogin />
     </div>
   );
 };

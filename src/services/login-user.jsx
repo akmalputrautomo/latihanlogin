@@ -1,16 +1,17 @@
 import { useMutation } from "@tanstack/react-query";
-
 import { toast } from "react-toastify";
 import http from "../utils/http";
 import { API_ENDPOINT } from "../utils/api-endpoint";
 import { CookieKeys, CookieStorage } from "../utils/cookies";
+import { Navigate } from "react-router-dom";
 
 const LoginUser = async (input) => {
   return await http
     .post(API_ENDPOINT.LOGIN_USER, input)
     .then((result) => {
       CookieStorage.set(CookieKeys.AuthToken, result.data.data.token);
-      console.log(result.data.data.token);
+      // console.log(result.data.data.token);
+
       return result;
     })
     .catch((err) => {
