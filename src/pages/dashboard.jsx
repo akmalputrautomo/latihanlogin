@@ -3,7 +3,7 @@ import { CookieKeys, CookieStorage } from "../utils/cookies";
 import { useGetDataUser } from "../services/get-user";
 
 export const Dashboard = () => {
-  const { data: Paijosalto } = useGetDataUser({});
+  useGetDataUser({});
 
   return (
     <div className="flex items-center justify-center flex-col h-screen ">

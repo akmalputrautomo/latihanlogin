@@ -10,8 +10,9 @@ const LoginUser = async (input) => {
     .post(API_ENDPOINT.LOGIN_USER, input)
     .then((result) => {
       CookieStorage.set(CookieKeys.AuthToken, result.data.data.token);
-      // console.log(result.data.data.token);
-
+      // window.location.href = "/dashboard";
+      // toast.success("anda berhasil login");
+      // Navigate("/dashboard");
       return result;
     })
     .catch((err) => {

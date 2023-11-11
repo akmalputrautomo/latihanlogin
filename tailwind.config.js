@@ -3,6 +3,11 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {},
+    screens: {
+      mobile: "414px",
+      tablet: "800px",
+      desktop: "1440px",
+    },
   },
   plugins: [],
 };

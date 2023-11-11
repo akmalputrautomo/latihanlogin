@@ -7,7 +7,7 @@ import GoogleLogin from "../assets/component/Googlelogin";
 export const Login = () => {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
-  const { mutate: Login, isSuccess, data, error, isError, status } = useLoginUser();
+  const { mutate: Login, isSuccess, data } = useLoginUser();
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
@@ -34,7 +34,7 @@ export const Login = () => {
   };
 
   useEffect(() => {
-    if (data?.data.data.token) {
+    if (isSuccess) {
       toast.success("Anda berhasil login");
       navigate("/dashboard");
     }
