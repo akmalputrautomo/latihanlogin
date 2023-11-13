@@ -4,9 +4,9 @@ module.exports = {
   theme: {
     extend: {},
     screens: {
-      mobile: "414px",
-      tablet: "800px",
-      desktop: "1440px",
+      mobile: "200px",
+      tablet: "600px",
+      desktop: "1150px",
     },
   },
   plugins: [],
